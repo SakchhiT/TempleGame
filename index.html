@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="Homescreen/Home_background.png">
+    <link rel="preload" as="image" href="Endscreen/End_background.png">
+ 
+</head>
+    <body>
+  <!-- HOME SCREEN -->
+  <div id="home-screen">
+    <img id="game-title" src="Homescreen/Kish's_Kuest.png" />
+    <img id="play-button" src="Homescreen/Play.png" />
+    <img id="kishore" src="Homescreen/Kishore_Homescreen.png" />
+    <img id="bello" src="Homescreen/Bello_Text.png" />
+    <img id="instruction" src="Homescreen\Hold-Space-to-Pray-7-28-2025.png"/>
+  </div>
+
+  <!-- GAMEPLAY SCREEN -->
+  <div id="game-screen">
+    <div id="scrolling-bg">
+      <img class="bg-frame" src="GamePlay/Background1.png" />
+      <img class="bg-frame" src="GamePlay/Background2.png" />
+      <img class="bg-frame" src="GamePlay/Background1.png" />
+      <img class="bg-frame" src="GamePlay/Background2.png" />
+    </div>
+
+     <!-- SCORE -->
+    <div id="score-ui">
+        <img id="score-label" src="GamePlay/Score.png" alt="Score" />
+        <img id="score-value" src="GamePlay/0-5-7-27-2025.png" alt="0/5" />
+        <img id="health-bar" src="GamePlay/Healthbar_1.png" style="display: none;" />
+    </div>
+    <!-- CHARACTER -->
+    <img id="kishoreWalk" src="GamePlay/Kishorewalking.gif" alt="Kishore walking" />
+    <img id="temple" src="GamePlay/Temple1.png" alt="Temple" />
+  </div>
+
+   <!-- END SCREEN -->
+  <div id="end-screen">
+    <img id="end-title" src="Endscreen/Game-Over-You-Won-7-27-2025.png" alt="Game Over Title" />
+    <img id="replay-button" src="Endscreen/Replay button.png" alt="Replay Button" />
+    <img id="x-button" src="Endscreen/X button.png" alt="Close Button" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+

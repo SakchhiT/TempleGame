@@ -1,0 +1,246 @@
+/* --- KEEP THIS SECTION --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+  font-family: sans-serif;
+}
+
+
+/* --- PULSING MOTION --- */
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+
+/* --- KEEP THIS FOR HOMESCREEN --- */
+#home-screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('Homescreen/Home_Background.png');
+  background-size: auto 100%;   /* Fit height, width auto */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000000; 
+  overflow: hidden; /* Prevent children from overflowing */
+}
+
+
+/* --- KEEP THE REST OF YOUR UI STYLES --- */
+#game-title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  max-width: 90vw;
+  height: auto;
+  display: block;
+  z-index: 2;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+
+#play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#kishore {
+  position: absolute;
+  bottom: 5%;
+  left: 55%;
+  width: 290px;
+  z-index: 2;
+}
+
+#bello {
+  position: absolute;
+  bottom: 38%;
+  left: 65%;
+  width: 150px;
+  animation: float 1.2s ease-in-out infinite;
+  z-index: 2;
+}
+
+
+#instruction {
+  position: absolute;
+  bottom: 0%;
+  right: 50%;
+  width: 380px;
+  z-index: 2;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* --- DELETE THIS: NO LONGER NEEDED FOR GAMEPLAY BG --- */
+#home-screen.gameplay-bg {
+    background-image: url('GamePlay/Background1.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    animation: scroll-bg 20s linear infinite;
+    }
+
+@keyframes scroll-bg {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -100vw; }
+}
+
+
+#game-screen {
+  display: none; /* hidden by default */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+/* Hides the scrolling background until game starts */
+#scrolling-bg {
+  display: none; /* hidden initially */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 400vw; /* 4x screen width since 4 images */
+  display: flex;
+  z-index: 1;
+  animation: scrollBackground 20s linear infinite;
+}
+
+.bg-frame {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+@keyframes scrollBackground {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200vw); }
+}
+
+
+#score-ui {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+#score-ui img {
+  image-rendering: pixelated;
+}
+
+#score-label{
+    height: 80px; 
+}
+#score-value {
+  height: 70px; 
+}
+
+#health-bar {
+  position: absolute;
+  top: 60px; /* just below the score */
+  left: 10px;
+  height: 80px;
+  image-rendering: pixelated;
+  z-index: 5;
+}
+
+#kishoreWalk {
+  position: absolute;
+  bottom: 30%;
+  left: 15%;
+  height: 200px;
+  image-rendering: pixelated;
+  z-index: 3;
+}
+
+#temple {
+  position: absolute;
+  bottom: 25%;
+  left: 0; /* anchor point */
+  height: 400px;
+  image-rendering: pixelated;
+  z-index: 2;
+  transform: translateX(0px); /* initialized by JS */
+}
+
+
+/* END SCREEN */
+#end-screen {
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('Endscreen/End_background.png'); /* Add your background path */
+  background-size: auto 100%;   /* Fit height, width auto */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000000; 
+  overflow: hidden; /* Prevent children from overflowing */
+}
+
+
+#end-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  max-width: 90vw;
+  height: auto;
+  display: block;
+  z-index: 2;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+#replay-button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#x-button {
+  position: absolute;
+  bottom: 15%;
+  left: 46.5%;
+  width: 80px;
+  cursor: pointer;
+  image-rendering: pixelated;
+  z-index: 2;
+}
+
+
